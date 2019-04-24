@@ -9,14 +9,4 @@ export default {
 			});
 		}
 	},
-	/**
-	 * Unsubscribe from channels when component is destroyed.
-	 */
-	destroyed() {
-		if (this.$options.channels) {
-			Object.keys(this.$options.channels).forEach(key =>
-				this.$cable._removeChannel(key)
-			);
-		}
-	}
 };
